@@ -3,52 +3,191 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Peltola.dev</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
+    <title>/peltola/dev</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Roboto Mono', sans-serif;
+        background-color: #c3c3c3;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+
+      a:link {
+        color: #000;
+      }
+
+      a:visited {
+        color: #000;
+      }
+
+      a:hover {
+        color: #888;
+      }
+
+      #menu-bar {
+        background-color: #fff;
+        color: #000;
+        display: flex;
+        align-items: center;
+        padding: 4px 8px;
+        font-size: 16px;
+        position: sticky;
+        top: 0;
+      }
+
+      .menu-item {
+        margin-right: 6px;
+        font-weight: bold;
+        cursor: pointer;
+        user-select: none;
+        padding: 2px 4px;
+        margin-top: 3px;
+      }
+
+      .menu-item:hover {
+        color: #fff;
+        background-color: #000;
+        padding: 2px 4px;
+        margin-top: 3px;
+      }
+
+      .window {
+        border: 2px solid #2b2b2d;
+        background-color: #fff;
+        width: 100% - 20px;
+        height: calc(100vh - 40px);
+        top: 40px;
+        left: 0;
+        padding: 8px;
+        display: none;
+        max-height: 600px;
+      }
+
+      .window .title-bar {
+        background-color: #eee;
+        color: #000;
+        font-weight: bold;
+        font-size: 18px;
+        padding: 4px 8px;
+        text-align: center;
+        margin: -8px -8px 0 -8px;
+      }
+
+      .content {
+        font-size: 14px;
+        max-height: 570px;
+        padding: 20px;
+      }
+    </style>
   </head>
-  <body data-theme="light">
-    <header>
-      <h1>/peltola/dev</h1>
-    </header>
+  <body>
+    <div id="menu-bar">
+      <div class="menu-item" data-target="about">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-apple" viewBox="0 0 16 16">
+          <path
+            d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282"
+          />
+          <path
+            d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282"
+          />
+        </svg>
+      </div>
+      <div class="menu-item" data-target="about">About</div>
+      <div class="menu-item" data-target="links">Links</div>
+      <div class="menu-item" data-target="contact">Contact</div>
+      <div class="menu-item" data-target="blog">Blog</div>
+    </div>
 
-    <p style="text-align: center">Site still under construction!</p>
+    <div id="about" class="window" style="display: block">
+      <div class="title-bar">
+        <div></div>
+        About
+      </div>
+      <div class="content">
+        <p>
+          Hello there. I'm Markus Peltola, a lifelong tech enthusiast and self-proclaimed nerd with a passion for building and optimizing
+          systems. Currently, I work as an Integration Team Lead at <a href="https://www.rantalainen.fi/en/">Rantalainen</a>, where I help
+          our internal and external clients to automate their work flows and integrate systems to one another.
+        </p>
+        <p>
+          Outside of work, I'm equally fascinated by the business side of things and keep a close eye on finance news to stay informed about
+          the ever-changing world of economics. This blend of tech and business curiosity shapes how I approach challenges both
+          professionally and personally.
+        </p>
+        <p>
+          When I'm not buried in code or exploring the latest tech trends, I enjoy the slower pace of life. Reading is my go-to way to
+          unwind and focus in today's fast-paced world. Our lovely little family contains a delightful German Spitz, who brings joy and
+          mischief in equal measure. The dog loves walks in the snowy forest above anything else.
+        </p>
+        <p>
+          In my free time, you'll often find me at the gym, improving my fitness, or immersed in music — my tastes are as eclectic as they
+          come, from Japanese Garage Rock from the 00's to the latest Italian pop music. Occasionally, I even pick up a guitar to strum out
+          some tunes of my own.
+        </p>
+        <p>If you share interests with me or wanna contact me about something else, check out the links page.</p>
+        <p>I use vim by the way ;)</p>
+      </div>
+    </div>
 
-    <main>
-      <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! I'm Markus Peltola, an integration developer working at Rantalainen.</p>
-      </section>
+    <div id="links" class="window">
+      <div class="title-bar">Links</div>
+      <div class="content">
+        <h2><a href="https://github.com/markus-peltola">GitHub</a> (Personal)</h2>
+        <p>If you want to check what projects I've saved to my GitHub page.</p>
+        <h2><a href="https://github.com/rantalainen">GitHub</a> (Company)</h2>
+        <p>If you want to check out the awesome open source projects we've done in my company.</p>
+        <h2><a href="https://www.linkedin.com/in/markuspeltola">LinkedIn</a></h2>
+        <p>If you want to contact me or check what I've done in my career, this is the place for that.</p>
+        <h2><a href="https://www.goodreads.com/ot1s">GoodReads</a></h2>
+        <p>Check out what I've read.</p>
+        <h2><a href="https://www.twit.tv">TWiT.tv</a></h2>
+        <p>
+          Best place for tech related podcasts. Perfect for your commutes or dog walks. Every self respecting tech professional should at
+          least listen to <a href="https://twit.tv/shows/security-now">Security Now</a> every week.
+        </p>
+        <h2><a href="https://www.rantalainen.io">Rantalainen Integrations</a> (in Finnish)</h2>
+        <p>Check out the integrations services my company has to offer.</p>
+      </div>
+    </div>
 
-      <section id="links">
-        <h2>Links</h2>
-        <ul>
-          <li><a href="https://github.com/markus-peltola">GitHub</a></li>
-          <li><a href="https://linkedin.com/in/markuspeltola">LinkedIn</a></li>
-        </ul>
-      </section>
+    <div id="contact" class="window">
+      <div class="title-bar">Contact</div>
+      <div class="content">
+        <p>The best way to contact me personnally is through my <a href="https://www.linkedin.com/in/markuspeltola">LinkedIn</a> page.</p>
+        <p>
+          The best way to get professional services from me is through my company's
+          <a href="https://www.rantalainen.io">Integrations</a> page (in Finnish).
+        </p>
+      </div>
+    </div>
 
-      <section id="blog">
-        <h2>Blog</h2>
-        <p>Coming soon!</p>
-      </section>
-    </main>
-
-    <footer>
-      <p>&copy; 2024 Peltola.dev</p>
-    </footer>
-
-    <button class="theme-toggle" onclick="toggleTheme()">
-      <span id="theme-icon">🌜</span>
-    </button>
+    <div id="blog" class="window">
+      <div class="title-bar">Blog</div>
+      <div class="content">
+        <p>Coming soon...</p>
+      </div>
+    </div>
 
     <script>
-      function toggleTheme() {
-        const body = document.body;
-        const currentTheme = body.getAttribute('data-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        body.setAttribute('data-theme', newTheme);
-        document.getElementById('theme-icon').textContent = newTheme === 'light' ? '🌜' : '🌞';
-      }
+      const menuItems = document.querySelectorAll('.menu-item');
+      const windows = document.querySelectorAll('.window');
+
+      menuItems.forEach((item) => {
+        item.addEventListener('click', () => {
+          windows.forEach((win) => (win.style.display = 'none'));
+          const target = item.getAttribute('data-target');
+          const windowElement = document.getElementById(target);
+          windowElement.style.display = 'block';
+        });
+      });
     </script>
   </body>
 </html>
