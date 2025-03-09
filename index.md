@@ -3,6 +3,7 @@ title: "About"
 layout: "layout.html"
 ---
 
+<img src="/img/portrait.jpeg" alt="My portrait" width="200" height="200" style="display: inline-block; float: left; margin: 0 20px 20px 0;"></img>
 Hello there. I'm Markus Peltola, a lifelong tech enthusiast and self-proclaimed nerd with a passion for building and optimizing
 systems. Currently, I work as an Development Team Lead at <a href="https://www.rantalainen.fi/en/">Rantalainen</a>, where I help
 our internal and external clients to automate their work flows and integrate systems to one another.
