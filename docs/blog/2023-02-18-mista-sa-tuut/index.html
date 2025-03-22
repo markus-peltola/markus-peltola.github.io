@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
+    <title>/peltola/dev</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Roboto Mono', sans-serif;
+        background-color: #c3c3c3;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+
+      a:link {
+        color: #000;
+      }
+
+      a:visited {
+        color: #000;
+      }
+
+      a:hover {
+        color: #888;
+      }
+
+      #menu-bar {
+        background-color: #fff;
+        color: #000;
+        display: flex;
+        align-items: center;
+        padding: 4px 8px;
+        font-size: 16px;
+        position: sticky;
+        top: 0;
+      }
+
+      .menu-item {
+        margin-right: 6px;
+        font-weight: bold;
+        cursor: pointer;
+        user-select: none;
+        padding: 2px 4px;
+        margin-top: 3px;
+        text-decoration: none;
+      }
+
+      .menu-item:hover {
+        color: #fff;
+        background-color: #000;
+        padding: 2px 4px;
+        margin-top: 3px;
+      }
+
+      .window {
+        border: 2px solid #2b2b2d;
+        background-color: #fff;
+        width: 100% - 20px;
+        top: 40px;
+        left: 0;
+        padding: 8px;
+        display: none;
+        min-height: 600px;
+      }
+
+      .window .title-bar {
+        background-color: #eee;
+        color: #000;
+        font-weight: bold;
+        font-size: 18px;
+        padding: 4px 8px;
+        text-align: center;
+        margin: -8px -8px 0 -8px;
+      }
+
+      .content {
+        font-size: 14px;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="menu-bar">
+      <a href="/" class="menu-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-apple" viewBox="0 0 16 16">
+          <path
+            d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282"
+          />
+          <path
+            d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282"
+          />
+        </svg>
+      </a>
+      <a class="menu-item" href="/">About</a>
+      <a class="menu-item" href="/links">Links</a>
+      <a class="menu-item" href="/contact">Contact</a>
+      <a class="menu-item" href="/blog">Blog</a>
+    </div>
+
+    <div id="about" class="window" style="display: block">
+      <div class="title-bar">
+        Blog
+      </div>
+      <div class="content">
+        
+<a href="/blog">&lt; Takaisin</a>
+<div style="margin-top: 20px;">2023-02-18</div>
+<h2 style="margin-top: 3px;">Mist sä tuut?</h2>
+<div>
+  <p>Nykyään yhä harvemmin työskennellään saman työnantajan palveluksessa vuosikymmeniä. Yhä useammin vaihdetaan myös alaa kesken uran ja aloitetaan ”alusta”, tuoden kuitenkin mukanaan uutta näkökulmaa aiemman kokemuksen avulla. Oma tarinani seuraa myös hyvin paljon näitä uria, sillä työelämäni vaiheisiin on mahtunut paljon kaikenlaista.</p>
+<p>Vaikka olen maailmaakin nähnyt, olen silti asunut koko elämäni Varsinais-Suomessa. Tosin, kolmen kuukauden vaihtoreissua Tansaniaan voisi joku kutsua jo asumiseksi toisessa maassa. Jos tämä seikkailu kiinnostaa lisää, siitä löytyy oma bloginsa (https://otis-tanzania.blogspot.com/). Peruskoulut ja lukion Salon Halikossa käyneenä, korkeakoulun suorittaminen Turussa tuntui itselleni luontevimmalta vaihtoehdolta. Nuorena kloppina sitä ei vain vielä tiennyt mitä elämältään haluaa, joten koulutuksen valinta ei ollut itsestään selvää. Päädyin lopulta kaupalliselle alalle, koska se tuntui avaavan ovia moneen suuntaan ja olisi samalla yleishyödyllinen koulutus (mitenkään väheksymättä muiden alojen yleishyödyllisyyttä). Haaveilin tuolloin itseni isojen ruutujen eteen treidaamaan arvopapereita ja tuijottamaan talouskäppyröitä. Tämän vuoksi päätin valmistua Rahoitus- ja vakuutusalan Tradenomiksi.</p>
+<p>En kuitenkaan ehtinyt kerryttää kovin paljoa kokemusta rahoitusalalta, kun taloushallinto alkoi kiinnostaa enemmän ja hankin lisäkoulutuksen siltä alalta. Tästä alkoikin minun niin kutsuttu pisin uravaiheeni tähän mennessä ja ehdin tehdä sen aikana kirjanpitäjän, palkanlaskijan, sovellusvastaavan sekä ratkaisuarkkitehdin töitä. Työ oli kiinnostavaa ja motivaatio ajoi eteenpäin kohti mielenkiintoisempia tehtäviä.</p>
+<p>Jo pienestä pojasta lähtien minua on kiinnostanut teknologia ja olen viihtynyt sen parissa harrastusten ja itseopiskelun merkeissä. Ajatus teknologian parissa työskentelystä kyti päässäni pitkän aikaa ja keräsin kokemusta mm. ohjelmoimisesta taloushallinnon työni ohella. Kun ensimmäistä kertaa pääsin työssäni sivuprojektina koodaamaan RPA Frameworkilla ja Pythonilla automaatioskriptiä, leimahti tuo kytevä ajatus täyteen liekkiin. Tässä vaiheessa tajusin, ettei mikään muu työ tule enää tuntumaan niin mielenkiintoiselta kuin koodaus. Oli pakko saada työ, jossa pääsee ohjelmoimaan!</p>
+<p>Kuin universumin vastauksena tavoitteilleni, aiemmasta työpaikastani avautui paikka, jossa pääsisin ohjelmoinnin lisäksi hyödyntämään aiempaa osaamistani taloushallinnon alalta. Kaikki taustalla tekemäni työ tämän tavoitteen eteen ei todellakaan mennyt hukkaan. Paras keino saavuttaa tavoitteensa, on tehdä töitä niiden eteen niin pitkään, että ne lopulta toteutuvat. Joskus kyseessä on maratoni, jossa tarvitaan sinnikkyyttä ja ehkä ripaus onneakin.</p>
+<p>Nuoruuden visiot isoista näytöistä ja osakekaavioista ovatkin vaihtuneet isoihin näyttöihin ja lukuisiin koodiriveihin. Matkalle on mahtunut monenlaista ja kuka tietää mitä tulevaisuus tuo tullessaan. Sen ainakin tiedän, että nyt olen vihdoin sillä alalla, jossa minun olisi pitänyt olla alusta asti. Tuskin silti vaihtaisin päivääkään vaikka voisin. Tämä pitkä ja mutkainen tie on rikastuttanut elämääni paljon ja olen vihdoin löytänyt perille. Joidenkin meistä pitää navigoida elämän teillä hieman pidempään kuin muiden, eivätkä kaikki meistä löydä sitä suorinta reittiä perille. Älkää kuitenkaan ajatelko vähemmän meistä, sillä mutkainen tie tuo enemmän kokemuksia ja seikkailuja kuin suorin ja lyhin tie.</p>
+
+</div>
+
+      </div>
+    </div>
+
+  </body>
+</html>

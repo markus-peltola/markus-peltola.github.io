@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev": "npx eleventy --serve",
+    "dev": "npx eleventy --serve --output=docs",
     "deploy": "npx eleventy && gh-pages -d _site"
   },
   "devDependencies": {
